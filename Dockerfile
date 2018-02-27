@@ -8,16 +8,10 @@ RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true
 
 RUN apt-get update && apt-get install -y \
         gradle \
-        lib32gcc1 \
-        lib32ncurses5 \
-        lib32stdc++6 \
-        lib32z1 \
-        libc6-i386 \
         oracle-java8-installer \
         oracle-java8-set-default \
         unzip \
         wget \
-        zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
