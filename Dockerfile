@@ -28,6 +28,6 @@ RUN wget -O ${SDK_FILE} https://dl.google.com/android/repository/sdk-tools-linux
 
 RUN mkdir $HOME/.android && touch $HOME/.android/repositories.cfg
 
-COPY licenses ${ANDROID_HOME}/licenses
+RUN yes | sdkmanager --licenses
 
 VOLUME /opt/android-sdk-linux
